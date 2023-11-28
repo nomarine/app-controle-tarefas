@@ -19,7 +19,15 @@ class TarefaController extends Controller
 
     public function index()
     {
-        return "Chegamos aqui!";
+        if(auth()->check()){
+            $id = auth()->user()->id;
+            $nome = auth()->user()->name;
+            $email = auth()->user()->email;
+            return "ID: $id | Nome: $nome | E-mail: $email";
+        }  else {
+            echo "Ééé... não";
+        }
+
     }
 
     /**
