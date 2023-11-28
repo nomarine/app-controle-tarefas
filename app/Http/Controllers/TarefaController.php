@@ -14,19 +14,19 @@ class TarefaController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('auth');
+        //$this->middleware('auth');
     }
 
     public function index()
     {
-        if(auth()->check()){
+        //if(auth()->check()){
             $id = auth()->user()->id;
             $nome = auth()->user()->name;
             $email = auth()->user()->email;
             return "ID: $id | Nome: $nome | E-mail: $email";
-        }  else {
+        /*}  else {
             echo "Ééé... não";
-        }
+        }*/
 
     }
 
