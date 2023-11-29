@@ -12,4 +12,5 @@ The following knowledge areas were applied in this project:
 - **E-mail Delivery:** Implementaton of e-mail protocols to delivery user notifications.
 
 Previous project repo: [App Super Gestão](https://github.com/nomarine/app_super_gestao)
+
 Course Link: [Complete Laravel Developer Course](https://www.udemy.com/course/curso-completo-do-desenvolvedor-laravel/)
