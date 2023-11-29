@@ -2,19 +2,15 @@
 
 # Projeto do Curso de PHP, Laravel e Vue.js
 
-Aplicação didática do curso de PHP avançado utilizando a framework Laravel do professor Jorge Sant Ana.
-O projeto é uma aplicação web direcionada para a gestão de fornecedores, produtos e clientes, dividida entre uma extranet e uma intranet, onde são trabalhados os métodos CRUD para gestão da base de dados.
+Continuação do curso PHP avançado utilizando o framework Laravel do professor Jorge Sant Ana.
+Este projeto é uma aplicação web para gerenciamento de tarefas. 
+O objetivo educacional é aprender como o Laravel trabalha com scaffolding, mecanismos de autenticação pré-estabelecidos e protocolos de e-mail.
 
-Nele foram aplicados os seguintes conhecimentos:
+As seguintes áreas de conhecimento foram aplicadas neste projeto:
 
-- **Padrão de Projeto Model-View-Controller (MVC):** Criação de controladores e de views do lado do back-end da aplicação com a utilização do engine de views Blade.  
-- **Eloquent ORM, Migrations e Tinker:** gerenciamento do banco de dados MySQL.  
-- **Seeders e Factories:** geração de massa para popular a base e realizar testes.  
-- **Middlewares:** Interceptação de requisições e respostas utilizando Middlewares.  
-- **Routes:** Criação de rotas, grupos, verbos HTTP Get, Post, Delete, Put e Patch.  
-- **Manipulação e validação de formulários.**
-- **Eager vs. Lazy Loading.**
-- **Soft vs. Hard Delete.**
-- **Relações de banco de dados 1-1, 1-N e N-N:** utilização das funções hasOne, hasMany, belongsTo, belongsToMany, attach, detach.
+- **Scaffolding:** Criação de controller e views de backend usando o pacote UI.
+- **Autenticação:** Utilização de métodos prontos para uso para lidar com registro e autenticação de usuários.
+- **E-mail Delivery:** Implementação de protocolos de e-mail para entrega de notificações aos usuários.
 
+Repositório do projeto anterior: [App Super Gestão](https://github.com/nomarine/app_super_gestao)
 Link do curso: https://www.udemy.com/course/curso-completo-do-desenvolvedor-laravel/
