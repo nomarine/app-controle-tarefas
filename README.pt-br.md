@@ -11,6 +11,7 @@ As seguintes áreas de conhecimento foram aplicadas neste projeto:
 - **Scaffolding:** Criação de controller e views de backend usando o pacote UI.
 - **Autenticação e Verificação:** Utilização de métodos prontos para uso para lidar com registro, autenticação de usuários, verificação de e-mail.
 - **Envio de E-mail:** Implementação de protocolos de e-mail para entrega de notificações aos usuários.
+- **Customização de Telas e E-mail:** Alteração das telas de verificação e dos e-mails automáticos.
 
 Repositório do projeto anterior: [App Super Gestão](https://github.com/nomarine/app_super_gestao)
 Link do curso: https://www.udemy.com/course/curso-completo-do-desenvolvedor-laravel/
