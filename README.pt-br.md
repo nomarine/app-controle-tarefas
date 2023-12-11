@@ -9,8 +9,8 @@ O objetivo educacional é aprender como o Laravel trabalha com scaffolding, meca
 As seguintes áreas de conhecimento foram aplicadas neste projeto:
 
 - **Scaffolding:** Criação de controller e views de backend usando o pacote UI.
-- **Autenticação:** Utilização de métodos prontos para uso para lidar com registro e autenticação de usuários.
-- **E-mail Delivery:** Implementação de protocolos de e-mail para entrega de notificações aos usuários.
+- **Autenticação e Verificação:** Utilização de métodos prontos para uso para lidar com registro, autenticação de usuários, verificação de e-mail.
+- **Envio de E-mail:** Implementação de protocolos de e-mail para entrega de notificações aos usuários.
 
 Repositório do projeto anterior: [App Super Gestão](https://github.com/nomarine/app_super_gestao)
 Link do curso: https://www.udemy.com/course/curso-completo-do-desenvolvedor-laravel/
