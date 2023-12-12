@@ -32,7 +32,7 @@ class TarefaController extends Controller
      */
     public function create()
     {
-        //
+        return view('tarefa.create');
     }
 
     /**
@@ -43,7 +43,24 @@ class TarefaController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $regras = [
+            'tarefa' => 'required|max:200',
+            'dt_limite' => 'after_or_equal:today'
+        ];
+
+        $feedback = [
+            'max' => 'O campo :attribute tem que ter no máximo :max caracteres.',
+            'required' => 'Obrigatório informar :attribute.',
+            'after_or_equal' => 'Deve ser a data de hoje ou posterior.'
+        ];
+
+        $request->validate($regras, $feedback);
+
+        $tarefa = Tarefa::create($request->all());
+
+        return redirect()->route('tarefa.show', 
+            ['tarefa' => $tarefa->id
+        ]);
     }
 
     /**
@@ -54,7 +71,7 @@ class TarefaController extends Controller
      */
     public function show(Tarefa $tarefa)
     {
-        //
+        echo 'Tarefa #' . $tarefa->id . ' ' . $tarefa->tarefa . ' | Data Limite de Conclusão ' . date('d/m/Y', strtotime($tarefa->dt_limite));
     }
 
     /**
