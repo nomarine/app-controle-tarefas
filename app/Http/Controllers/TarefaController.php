@@ -22,7 +22,7 @@ class TarefaController extends Controller
     public function index()
     {
         $logged_user = auth()->user()->id;
-        $tarefas = Tarefa::where('user_id', $logged_user)->paginate(1);
+        $tarefas = Tarefa::where('user_id', $logged_user)->paginate(2);
 
         return view('tarefa.index', ['tarefas' => $tarefas]);
     }
