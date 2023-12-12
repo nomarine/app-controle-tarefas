@@ -14,6 +14,7 @@
                         <th scope="col">ID</th>
                         <th scope="col">Tarefa</th>
                         <th scope="col">Data Limite de Conclusão</th>
+                        <th scope="col">Ação</th>
                       </tr>
                     </thead>
                     <tbody>
@@ -22,6 +23,7 @@
                         <th scope="row">{{ $tarefa->id }}</th>
                         <td>{{ $tarefa->tarefa }}</td>
                         <td>{{ date('d/m/Y', strtotime($tarefa->dt_limite)) }}</td>
+                        <td><a href="{{ route('tarefa.edit', ['tarefa' => $tarefa->id] ) }}">Editar</a></td>
                       </tr>
                       @endforeach
                     </tbody>

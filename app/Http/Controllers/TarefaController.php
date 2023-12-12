@@ -89,7 +89,7 @@ class TarefaController extends Controller
      */
     public function edit(Tarefa $tarefa)
     {
-        //
+        return view('tarefa.edit', ['tarefa' => $tarefa]);
     }
 
     /**
@@ -101,7 +101,26 @@ class TarefaController extends Controller
      */
     public function update(Request $request, Tarefa $tarefa)
     {
-        //
+        $regras = [
+            'tarefa' => 'required|max:200',
+            'dt_limite' => 'after_or_equal:today'
+        ];
+
+        $feedback = [
+            'max' => 'O campo :attribute tem que ter no máximo :max caracteres.',
+            'required' => 'Obrigatório informar :attribute.',
+            'after_or_equal' => 'Deve ser a data de hoje ou posterior.'
+        ];
+
+        $request->validate($regras, $feedback);
+
+        $dados = $request->all('tarefa', 'dt_limite');
+
+        $tarefa->update($dados);
+
+        return redirect()->route('tarefa.show', 
+            ['tarefa' => $tarefa->id
+        ]);
     }
 
     /**
