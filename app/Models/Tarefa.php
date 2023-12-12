@@ -11,6 +11,7 @@ class Tarefa extends Model
 
     protected $fillable = [
         'tarefa',
-        'dt_limite'
+        'dt_limite',
+        'user_id'
     ];
 }
