@@ -15,7 +15,7 @@ use App\Mail\MensagemTesteMail;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('boas-vindas');
 });
 
 Auth::routes(['verify' => true]);
