@@ -6,8 +6,17 @@
         <div class="col-md-8">
             <div class="card">
                 <div class="card-header">
-                  Tarefas
-                  <a class="float-right" href="{{ route('tarefa.create') }}">Novo</a>
+                  <div class=row>
+                    <div class="col-6">
+                      Tarefas
+                    </div>
+                    <div class="col-6">
+                      <div class="float-right">
+                        <a class="mr-3" href="{{ route('tarefa.export') }}">Exportar Planilha</a>
+                        <a class="" href="{{ route('tarefa.create') }}">Novo</a>
+                      </div>
+                    </div>
+                  </div>
                 </div>
 
                 <div class="card-body">

@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Mail\MensagemTesteMail;
 
+use App\Http\Controllers\TarefaController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -20,6 +22,9 @@ Route::get('/', function () {
 
 Auth::routes(['verify' => true]);
 
+Route::get('tarefa/export', [TarefaController::class, 'export'])
+    ->name('tarefa.export');
+    
 Route::resource('tarefa', 'App\Http\Controllers\TarefaController')
     ->middleware('verified');
 
