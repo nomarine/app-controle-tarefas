@@ -143,11 +143,21 @@ class TarefaController extends Controller
             return view('acesso-negado');    
         }
         $tarefa->destroy($tarefa->id);
+
         return redirect()->route('tarefa.index');
     }
 
-    public function export() 
+    public function export($extensao) 
     {
-        return Excel::download(new TarefasExport, 'tarefas.xlsx');
+        $filename = 'tarefas.';
+        if(strtolower($extensao) == 'csv'){
+            $filename .= $extensao;
+        } else if(strtolower($extensao) == 'xlsx'){
+            $filename .= $extensao;
+        } else {
+            return redirect()->route('tarefa.index');
+        }
+
+        return Excel::download(new TarefasExport, $filename);
     }
 }
