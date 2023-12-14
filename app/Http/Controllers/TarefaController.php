@@ -155,6 +155,8 @@ class TarefaController extends Controller
         } else if(strtolower($extensao) == 'pdf'){
             $tarefas = auth()->user()->tarefas()->get();
             $pdf = Pdf::loadView('tarefa.pdf', ['tarefas' => $tarefas]);
+            $pdf->setPaper('a4', 'landscape');
+            
             return $pdf->stream('tarefas.pdf');
         }
 
