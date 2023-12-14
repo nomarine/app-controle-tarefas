@@ -8,6 +8,7 @@ use Mail;
 use App\Mail\NovaTarefaMail;
 use App\Exports\TarefasExport;
 use Maatwebsite\Excel\Facades\Excel;
+use Barryvdh\DomPDF\Facade\Pdf;
 
 class TarefaController extends Controller
 {
@@ -149,9 +150,13 @@ class TarefaController extends Controller
 
     public function export($extensao) 
     {
-        if(in_array(strtolower($extensao), ['csv','xlsx','pdf'])){
+        if(in_array(strtolower($extensao), ['csv','xlsx'])){
             return Excel::download(new TarefasExport, 'tarefas.'.$extensao);
-        } 
+        } else if(strtolower($extensao) == 'pdf'){
+            $tarefas = auth()->user()->tarefas()->get();
+            $pdf = Pdf::loadView('tarefa.pdf', ['tarefas' => $tarefas]);
+            return $pdf->download('tarefas.pdf');
+        }
 
         return redirect()->route('tarefa.index');    
     }
