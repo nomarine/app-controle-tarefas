@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Mail\MensagemTesteMail;
 
 use App\Http\Controllers\TarefaController;
+use App\Http\Controllers\MockController;
 
 /*
 |--------------------------------------------------------------------------
@@ -28,7 +29,10 @@ Route::get('tarefa/export/{extensao}', [TarefaController::class, 'export'])
 Route::resource('tarefa', 'App\Http\Controllers\TarefaController')
     ->middleware('verified');
 
+Route::get('send', [MockController::class, 'send']);
+
 Route::get('mensagem-teste', function () {
     return new MensagemTesteMail();
 }
 );
+
