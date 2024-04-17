@@ -1,6 +1,6 @@
 [Brazilian Portuguese version](README.pt-br.md)
 
-# PHP, Laravel and Vue.js Course Project
+# Task Management
 
 This project is a web application for task creation and tracking, serving as a continuation of the Advanced PHP course with the Laravel framework by Professor Jorge Sant Ana. The educational objective is to learn how Laravel works with scaffolding, pre-established authentication mechanisms, and email protocols.
 
